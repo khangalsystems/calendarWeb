@@ -1,0 +1,15 @@
+node_modules
+config/config.env
+public/newsImg/*
+public/newsFile/*
+public/infoImg/*
+public/userImg/*
+public/workerImg/*
+public/branchImg/*
+public/capitalImg/*
+public/forumImg/*
+public/forumFile/*
+public/workerFile/*
+public/advertiseImg/*
+public/costImg/*
+!public/workerFile/.keep

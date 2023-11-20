@@ -1,0 +1,28 @@
+bash //ajilluulj orno
+.gitignore //file vvsgej gitryy huulahgui folder file uudiig bichij ungu
+git status // ulaan bol dotood git folderrvv huulaagui bna, git ryy orood bvgd nogoon bolno
+git add . //bvh file iig git folderryy huulna
+git commit -m 'Project uusgej anh udaa commit hiilee' //git dotor oruulna
+github.com //deer project uusgej daraag commandar holbono
+git remote add origin https://github.com/khangalsystems/books.git
+git remote -v // haashaa holbogdsong harna
+git push -u origin master //new update iig github ryy ilgeene
+git pull origin master //serverdeerh new update tataj avna
+
+//comment bichiw amar
+git reset HEAD^ --soft // uur deerh uurchlultuudiig heveern uldeej github deer baigaa projectiig oruulj irne
+
+//https://sequelize.org/docs/v6/other-topics/legacy/
+// 1:1
+Organization.belongsTo(User, { foreignKey: 'owner_id' });
+User.hasOne(Organization, { foreignKey: 'owner_id' });
+
+// 1:M
+Project.hasMany(Task, { foreignKey: 'tasks_pk' });
+Task.belongsTo(Project, { foreignKey: 'tasks_pk' });
+
+// N:M
+User.belongsToMany(Role, { through: 'user_has_roles', foreignKey: 'user_role_user_id' });
+Role.belongsToMany(User, { through: 'user_has_roles', foreignKey: 'roles_identifier' });
+//code hevend oruulah hevshvvleh
+npx prettier --write .
