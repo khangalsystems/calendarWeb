@@ -46,6 +46,10 @@ const sequelize = new Sequelize(
 const models = [
   require('../models/word'),
   require('../models/user'),
+  require('../models/code'),
+  require('../models/info'),
+  require('../models/news'),
+
 ]
 models.forEach((model) => {
   const seqModel = model(sequelize, Sequelize)

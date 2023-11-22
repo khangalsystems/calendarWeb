@@ -11,6 +11,8 @@ const fileUpload = require('express-fileupload')
 //route oruulj ireh
 
 const wordRoutes = require('./routes/word')
+const userRoutes = require('./routes/user')
+const newsRoutes = require('./routes/news')
 
 //appiin tohirgoo process.env rvv achaalah
 dotenv.config({ path: './config/config.env' })
@@ -26,6 +28,9 @@ app.use(express.urlencoded({limit: '50mb'}));
 app.use(fileUpload())
 app.use(injectDb(db)) //ene murnuus doosho bvgded db -g request er ugnu
 app.use('/api/v1/word', wordRoutes)
+app.use('/api/v1/news', newsRoutes)
+
+app.use('/api/v1/user', userRoutes)
 app.use(errorHandler)
 // .sync({force:true}) bol mysql deeres bvh table utsgaad modeliin dagyy shiner uusgene
 db.sequelize
